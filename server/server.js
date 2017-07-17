@@ -10,7 +10,7 @@ app.use(cookieParser());
 
 app.start = function() {
   // start the web server
-  var server = app.listen(function() {
+  var server = app.listen(8080,"0.0.0.0",function() {
     app.emit('started', server);
     var baseUrl = app.get('url').replace(/\/$/, '');
     console.log('Web server listening at: %s', baseUrl);
